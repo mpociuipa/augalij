@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    z-index: 100;
+    transition: .3s;
+}
+
+.logo {
+    position: relative;
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 600;
+}
+.namas {
+    height: 37px;
+    width: 50px;
+    float: left;
+}
+
+.navbar {
+    position: relative;
+    
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: black;
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: green;
+}
+
+#menu-icon {
+    position: relative;
+    font-size: 3.6rem;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+
+article {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+article:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    transition: 0.3s;
+}
+article:hover::before {
+    cursor: pointer;
+    opacity: 0;
+}
+article .content {
+    margin: auto;
+    z-index: 1;
+}
+
+.content {
+    width: 700px;
+    height: 400px;
+    background: white;
+    
+}
+.vidus {
+    padding: 100px 247px 0px 243px;
+    font-size: 25px;
+}
+.vidus1 {
+    padding: 0px 240px 0px 240px;
+   
+}
+.article {
+    background: url(images/forest.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    background-repeat: no-repeat;
+}
+.article::before {
+    background: white;
+}
+/* ----gydimieji augalai----*/
+h3 {
+    font-size: 30px;;
+    text-align: center;
+    margin: 80px;
+}
+
+.images-row {
+    display: flex;
+    flex: 1;
+}
+.images-column {
+    flex-direction: column;
+}
+.images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 80px;
+}
+  
+.images-with-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+  
+.images-with-text img {
+    width: 130px; 
+    height: 110px;
+    display: block;
+}
+  
+.images-with-text p {
+    width: 50%;
+    padding: 20px;
+}
+/* ----- nykstantys augalai----*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.image-row {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.image-container {
+    flex: 1;
+    text-align: left;
+}
+  
+.image-container img {
+    width: 213px;
+    height: auto;
+    display: block;
+    margin: 10px;
+}
+.image-container h4 {
+    width: 213px;
+    height: auto;
+    display: block;
+    margin: 10px;
+}
+.image-container p {
+    width: 213px;
+    height: auto;
+    display: block;
+    margin: 10px;
+}
+/* ------ misku nauda-----*/
+.forest2 {
+    width: 96vw;
+    height: 50vh;
+    margin: 25px;
+}
+.text-container {
+    margin: 25px;
+    text-align: center;
+    
+}
+.img-row {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        background: white;
+        justify-content: space-between;
+    }
+    
+    .image-row {
+        flex-direction: column;
+        padding: 100px;
+    }
+    .forest2 {
+        width: 93vw;
+    }
+    .img-row {
+        margin-right: 20px;;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .header {
+        background: white;
+        justify-content: space-between;
+    }
+    .content {
+        width: 600px;
+        height: 400px;
+    }
+    .vidus {
+        padding: 50px 100px 0px 103px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .vidus1 {
+        padding: 50px 140px 0px 190px;
+        
+       
+    }
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: rgb(214, 208, 208);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        z-index: 1;
+        transition: .25s ease;
+        transition-delay: .25s;
+    }
+
+    .navbar.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar .active-nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .active-nav {
+        left: 0;
+        transition-delay: .25;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active a {
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+    .container .image-row {
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-around;
+        height: auto;
+        padding: 20px;
+    }
+    .forest2 {
+        width: 90vw;
+    }
+    .text-container {
+        margin-right: 50px;
+        width: 90vw;
+    }
+}
+
+@media (max-width: 520px) {
+    html {
+        font-size: 50%;
+    }
+    .header {
+        justify-content: space-between;
+    }
+    .content {
+        width: 400px;
+        height: 300px;
+    }
+    .vidus {
+        padding: 50px 100px 0px 133px;
+        font-size: 15px;
+    }
+    .vidus1 {
+        padding: 0px 140px 0px 90px;
+       
+    }
+    .images-row {
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-around;
+        height: auto;
+        
+    }
+    .images-column {
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+    .images-with-text {
+        text-align: center;
+        flex-direction: column;
+        
+    }
+    .images-with-text img {
+        width: 300px;
+        height: 300px;
+    }
+    .images-with-text p {
+        width: 300px;
+        
+    }
+   
+    .image-container img {
+        width: 400px;
+        height: 300px;
+        
+    }
+    .image-container p {
+        width: 400px;
+        
+    }
+    .image-container h4{
+        width: 400px;
+        
+    }
+    .img-row{
+        text-align: center;
+        flex-direction: column;
+      
+    }
+
+    .footer p {
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+@media (max-width: 425) {
+    html {
+        font-size: 30%;
+    }
+    .header {
+        justify-content: space-between;
+    }
+    .content {
+        width: 300px;
+        height: 200px;
+    }
+    .vidus {
+        padding: 50px 100px 0px 133px;
+        font-size: 10px;
+    }
+    .vidus1 {
+        padding: 0px 140px 0px 90px;
+       
+    }
+}
+@media (max-width: 375px) {
+    .header {
+        justify-content: space-between;
+    }
+    .content {
+        width: 300px;
+        height: 200px;
+    }
+    .vidus {
+        padding: 40px 50px 0px 80px;
+        font-size: 15px;
+    }
+    .vidus1 {
+        padding: 0px 100px 0px 90px;
+        height: 40%;
+        width: 100%;
+    }
+    
+}
